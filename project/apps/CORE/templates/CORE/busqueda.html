@@ -1,0 +1,26 @@
+{% extends 'CORE/index.html' %}
+
+{% block INDEX_TITULO %} 
+    Búsquedas
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+
+    <h2> Clientes cuyo nombre contiene 'm'</h2>
+    {% for cliente in clientes_nombre %}
+        <p>{{ cliente }}</p>
+    {% endfor %}
+
+    <h2> Cliente cuyo nacimiento es antes de 2005 (mayor de edad) </h2>
+    {% for cliente in clientes_nacimiento %}
+        <p> {{ cliente }}</p>
+    {% endfor %}
+
+    <h2> Clientes de Argentina  </h2>
+    {% for cliente in clientes_pais %}
+        <p> {{ cliente }}</p>
+    {% endfor %}
+
+    <a href="{% url 'Home:home' %}">Ir al menú principal</a>
+
+{% endblock INDEX_CONTENIDO %}

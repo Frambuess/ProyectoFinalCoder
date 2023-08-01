@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <h1 style="color:purple;"></h1><title>Tienda</title></h1>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'CORE/assets/favicon.png' %}" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'CORE/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        {% include 'CORE/navbar.html' %}
+
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+
+            {% block BASE_CONTENIDO %}
+                
+            {% endblock BASE_CONTENIDO %}
+
+
+            <!-- Call to Action-->
+ <!--            <div class="card text-white bg-secondary my-5 py-4 text-center">
+                <div class="card-body"><p class="text-white m-0">This call to action card is a great place to showcase some important information or display a clever tagline!</p></div>
+            </div>-->
+
+        </div>
+        <!-- Footer-->
+        {% include 'CORE/footer.html' %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'CORE/js/scripts.js' %}"></script>
+    </body>
+</html>
