@@ -49,3 +49,21 @@ def busqueda(request: HttpRequest) -> HttpResponse:
         "clientes_pais": cliente_pais
     }
     return render(request, "CORE/busqueda.html", contexto)
+
+
+#! LOGIN
+
+
+def login_request(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        form = forms.CustomAuthenticationForm(request, request.POST)
+        if form.is_valid():
+            usuario = form.cleaned_data.get("username")
+            contraseña = form.cleaned_data.get("password")
+            user = authenticate(username=usuario, password=contraseña)
+            if user is not None:
+                login(request, user)
+                return render(request, "CORE/index.html", {"mensaje": "Inició sesión correctamente"})
+    else:
+        form = forms.CustomAuthenticationForm()
+    return render(request, "CORE/login.html", {"form": form})
