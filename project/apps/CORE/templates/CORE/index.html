@@ -5,7 +5,7 @@
 {% block BASE_CONTENIDO %}
 
 <div class="row align-items-center my-5">
-    <h1 class="pb-lg-3 text-bg-light">
+    <h1 class="pb-lg-3 text-bg-transparent">
         <br>
         {% block INDEX_TITULO %}
             Home
@@ -20,17 +20,18 @@
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'CORE/img/fotoppal.png' %}" alt="..." /></div>
         <div class="col-lg-5">
             <h1 class="font-weight-light">Tienda</h1>
-            <p>Descripción del negocio</p>
-            <h1 style="color:#25D366;"><a class="btn btn-primary" href="https://wa.me/5491100000000" target="_blank">WhatsApp</a></h1>
+            <p>Somos una tienda especializada en la comercialización de harinas, semillas y frutos secos. Queremos que pruebes y conozcas toda la variedad de productos. Hacemos envíos a todo el país.</p>
+            <a class="btn btn-success" href="https://wa.me/5491100000000" target="_blank">WhatsApp</a>
         </div>
     </div>
+   <!-- <h1 style="color:#25D366;">-->
 
     <!-- Content Row-->
     <div class="row gx-4 gx-lg-5">
 
         {% include 'CORE/card.html' with card="Promo 1" cardcontenido='Llevando 1 kilo de semillas y abonando con efectivo te regalamos una hamburguesa veggie. hjghjghjghjgjh hjg hdkfs dshdskhfds h djskfhdsj hfjdskfhds j fhjkshfjkdfhdjsk.' %}
-        {% include 'CORE/card.html' with card="Promo 2" cardcontenido='Llevando 2 kilos de semillas te regalamos otro.'%}
-        {% include 'CORE/card.html' with card="Promo 3" cardcontenido='Llevando 2 especias te regalamos chocolate al 100.'%}
+        {% include 'CORE/card.html' with card="Promo 2" cardcontenido='Llevando 2 kilos de semillas te regalamos chocolate al 100.'%}
+        {% include 'CORE/card.html' with card="Promo 3" cardcontenido='Los pedidos a Tucumán tienen 20% de descuento.'%}
 
 
     
