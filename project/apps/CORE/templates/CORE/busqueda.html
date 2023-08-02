@@ -20,6 +20,11 @@
     {% for cliente in clientes_pais %}
         <p> {{ cliente }}</p>
     {% endfor %}
-    <br><p><a href="{% url 'Home:home' %}">Ir al menú principal</a></p></br>
+    
+    
+    <br><p>
+    {% include 'CORE/index_back.html' %} </p></br>
+
+<!--    <br><p><a href="{% url 'Home:home' %}">Ir al menú principal</a></p></br> -->
 
 {% endblock INDEX_CONTENIDO %}

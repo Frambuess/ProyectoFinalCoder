@@ -14,8 +14,9 @@
     <p>Paga a través de {{ cliente.medio_id }} Nro {{ cliente.nrotarjeta }}.</p>
 
     {% endfor %}
-
-    <br><p><a href="{% url 'Home:home' %}">Ir al menú principal</a></p></br>
+    
+    <br><p>
+    {% include 'CORE/index_back.html' %}</p></br>
 
 {% endblock INDEX_CONTENIDO %}
 

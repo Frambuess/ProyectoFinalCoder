@@ -67,3 +67,6 @@ def login_request(request: HttpRequest) -> HttpResponse:
     else:
         form = forms.CustomAuthenticationForm()
     return render(request, "CORE/login.html", {"form": form})
+
+def about(request):
+    return render(request, "CORE/about.html")
