@@ -1,4 +1,6 @@
-<div class="col-md-4 mb-5">
+{% load static %}
+
+<!-- <div class="col-md-4 mb-5">
     <div class="card h-100">
         <div class="card-body">
             <h2 class="card-title">{{ card }}</h2>
@@ -6,4 +8,15 @@
         </div>
         <div class="card-footer"><a class="btn btn-success btn-sm" href="#!">Más información</a></div>
     </div>
-</div>
+</div> -->
+
+<!--'CORE/img/fotoppal.png'-->
+
+<div class="card">
+    <img src="{% static 'CORE/img/hambur.png' %}" class="card-img-top" alt="Promo1">
+    <div class="card-body">
+        <h5 class="card-title">{{ card }}</h5>
+        <p class="card-text">{{ cardcontenido }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div> 
