@@ -1,0 +1,34 @@
+{% extends 'CORE/index.html' %}
+
+{% block INDEX_TITULO %} 
+    Páginas del sitio
+{% endblock INDEX_TITULO %}
+
+
+<!-- Acceder a una pantalla que contendrá las páginas. Al clickear en "Leer más" o "Detalle" debe
+navegar al detalle de la page (ej. mediante una url pages/ ‹pageld›. (O sea al hacer click se ve
+más detalle de lo aue se veía en el apartado anterior). -->
+    
+{% block INDEX_CONTENIDO %}
+
+<UL TYPE="Disk">
+
+    <LI>
+    http://127.0.0.1:8000/ <button type="button" class="btn btn-outline-primary" href="{% url 'Home:home' %}">Detalle</button><br>
+    <!-- http://127.0.0.1:8000/admin/ <button type="button" class="btn btn-outline-primary" href="{% url 'Home:home' %}">Detalle</button> -->
+    <LI>
+    http://127.0.0.1:8000/clientes/ <button type="button" class="btn btn-outline-secondary" href="{% url 'Home:clientes' %}">Detalle</button><br>
+    <LI>
+    http://127.0.0.1:8000/crear/ <button type="button" class="btn btn-outline-success" href="{% url 'Home:crear' %}">Detalle</button><br>
+    <LI>
+    http://127.0.0.1:8000/busqueda/ <button type="button" class="btn btn-outline-danger" href="{% url 'Home:busqueda' %}">Detalle</button><br>
+    <LI>
+    http://127.0.0.1:8000/about/ <button type="button" class="btn btn-outline-warning" href="{% url 'Home:about' %}">Detalle</button><br>
+    <LI>
+    http://127.0.0.1:8000/pages/ <button type="button" class="btn btn-outline-info" href="{% url 'Home:pages' %}">Detalle</button><br>   
+    </UL>
+
+    <br><p>
+    {% include 'CORE/index_back.html' %} </p></br>
+
+{% endblock INDEX_CONTENIDO %}

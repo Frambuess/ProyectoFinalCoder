@@ -70,3 +70,6 @@ def login_request(request: HttpRequest) -> HttpResponse:
 
 def about(request):
     return render(request, "CORE/about.html")
+
+def pages(request):
+    return render(request, "CORE/pages.html")
