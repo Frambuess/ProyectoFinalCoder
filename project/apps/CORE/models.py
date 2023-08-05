@@ -7,6 +7,10 @@ class Pais(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+    class Meta:
+        verbose_name_plural = "Países"
+
 
 class Mediodepago(models.Model):
     medio=models.CharField(max_length=25)
