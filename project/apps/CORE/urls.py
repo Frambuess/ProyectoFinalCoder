@@ -10,8 +10,8 @@ app_name = "Home"
 
 urlpatterns = [
     path("", home, name="home"),
-    path('login/', views.login_request, name="login"),
-    path('logout/', LogoutView.as_view(template_name="Home/logout.html"), name="logout"),
+#    path('login/', views.login_request, name="login"),
+#    path('logout/', LogoutView.as_view(template_name="Home/logout.html"), name="logout"),
     path("clientes/", views.clientes, name="clientes"),
     path('crear/', crear_cliente, name="crear"),
     path('busqueda/', busqueda, name="busqueda"),
