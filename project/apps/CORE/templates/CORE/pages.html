@@ -1,5 +1,7 @@
 {% extends 'CORE/index.html' %}
 
+{% load static %}
+
 {% block INDEX_TITULO %} 
     Páginas del sitio
 {% endblock INDEX_TITULO %}
@@ -11,21 +13,25 @@ más detalle de lo aue se veía en el apartado anterior). -->
     
 {% block INDEX_CONTENIDO %}
 
+
+
+
+
+
 <UL TYPE="Disk">
 
     <LI>
-    http://127.0.0.1:8000/ <button type="button" class="btn btn-outline-primary" href="{% url 'Home:home' %}">Detalle</button><br>
-    <!-- http://127.0.0.1:8000/admin/ <button type="button" class="btn btn-outline-primary" href="{% url 'Home:home' %}">Detalle</button> -->
+    http://127.0.0.1:8000/  <a href="{% url 'Home:home' %}" role="button" class="btn btn-outline-primary"> Detalle </a><br><br>
+    <LI>    
+    http://127.0.0.1:8000/clientes/  <a href="{% url 'Home:clientes' %}" role="button" class="btn btn-outline-success"> Detalle </a><br><br>
     <LI>
-    http://127.0.0.1:8000/clientes/ <button type="button" class="btn btn-outline-secondary" href="{% url 'Home:clientes' %}">Detalle</button><br>
+    http://127.0.0.1:8000/crear/  <a href="{% url 'Home:crear' %}" role="button" class="btn btn-outline-warning"> Detalle </a><br><br>
     <LI>
-    http://127.0.0.1:8000/crear/ <button type="button" class="btn btn-outline-success" href="{% url 'Home:crear' %}">Detalle</button><br>
+    http://127.0.0.1:8000/busqueda/  <a href="{% url 'Home:busqueda' %}" role="button" class="btn btn-outline-info"> Detalle </a><br><br>
     <LI>
-    http://127.0.0.1:8000/busqueda/ <button type="button" class="btn btn-outline-danger" href="{% url 'Home:busqueda' %}">Detalle</button><br>
+    http://127.0.0.1:8000/about/  <a href="{% url 'Home:about' %}" role="button" class="btn btn-outline-dark"> Detalle </a><br><br>
     <LI>
-    http://127.0.0.1:8000/about/ <button type="button" class="btn btn-outline-warning" href="{% url 'Home:about' %}">Detalle</button><br>
-    <LI>
-    http://127.0.0.1:8000/pages/ <button type="button" class="btn btn-outline-info" href="{% url 'Home:pages' %}">Detalle</button><br>   
+    http://127.0.0.1:8000/pages/  <a href="{% url 'Home:pages' %}" role="button" class="btn btn-outline-danger"> Detalle </a><br><br>   
     </UL>
 
     <br><p>

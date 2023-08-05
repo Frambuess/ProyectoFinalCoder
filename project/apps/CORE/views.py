@@ -14,7 +14,6 @@ def home(request):
 def clientes(request):
     clientes_registros = Cliente.objects.all()
     contexto = {"clientes": clientes_registros}
-    # return render(request, "index.html", {"clientes": clientes_registros})
     return render(request, "CORE/clientes.html", contexto)
 
 
@@ -51,10 +50,16 @@ def busqueda(request: HttpRequest) -> HttpResponse:
     return render(request, "CORE/busqueda.html", contexto)
 
 
+def about(request):
+    return render(request, "CORE/about.html")
+
+def pages(request):
+    return render(request, "CORE/pages.html")
+
 #! LOGIN
 
 
-def login_request(request: HttpRequest) -> HttpResponse:
+""" def login_request(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = forms.CustomAuthenticationForm(request, request.POST)
         if form.is_valid():
@@ -66,10 +71,4 @@ def login_request(request: HttpRequest) -> HttpResponse:
                 return render(request, "CORE/index.html", {"mensaje": "Inició sesión correctamente"})
     else:
         form = forms.CustomAuthenticationForm()
-    return render(request, "CORE/login.html", {"form": form})
-
-def about(request):
-    return render(request, "CORE/about.html")
-
-def pages(request):
-    return render(request, "CORE/pages.html")
+    return render(request, "CORE/login.html", {"form": form}) """
