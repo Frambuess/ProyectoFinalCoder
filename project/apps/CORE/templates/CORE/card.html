@@ -1,22 +1,11 @@
 {% load static %}
 
-<!-- <div class="col-md-4 mb-5">
-    <div class="card h-100">
-        <div class="card-body">
-            <h2 class="card-title">{{ card }}</h2>
-            <p class="card-text" id="p3">{{ cardcontenido }}</p>
-        </div>
-        <div class="card-footer"><a class="btn btn-success btn-sm" href="#!">Más información</a></div>
-    </div>
-</div> -->
-
-<!--'CORE/img/fotoppal.png'-->
-
 <div class="card">
-    <img src="{% static 'CORE/img/hambur.png' %}" class="card-img-top" alt="Promo1">
+    <!-- <img src="{% static 'CORE/img/hambur.png' %}" class="card-img-top" alt="Promo1"> -->
+    <img src="{% if cardcontenido == "Hamburguera" %} {% static 'CORE/img/hambur.png' %} {% elif cardcontenido == "Chocolatosa" %} {% static 'CORE/img/cacao.png' %}  {% elif cardcontenido == "Norteña" %} {% static 'CORE/img/sesamo.png' %}  {% endif %}" class="card-img-top" alt="Promo1">
     <div class="card-body">
         <h5 class="card-title">{{ card }}</h5>
         <p class="card-text">{{ cardcontenido }}</p>
-        <a href="#" class="btn btn-success">Go somewhere</a>
+        <a href="{% if cardcontenido == "Hamburguera" %} {% url 'Home:promo1' %} {% elif cardcontenido == "Chocolatosa" %} {% url 'Home:promo2' %} {% elif cardcontenido == "Norteña" %} {% url 'Home:promo3' %} {% endif %}" class="btn btn-success">Más información</a>
     </div>
 </div> 

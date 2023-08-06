@@ -1,5 +1,8 @@
 # Create your views here.
 
+#! importaciones para login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
@@ -11,12 +14,15 @@ from django.views.generic import (
     UpdateView,
 )
 
+
 from . import forms, models
 
+@login_required
 def index(request):
     return render(request, "producto/index.html")
 
 # LIST
+
 
 class ProductoCategoriaList(ListView):
     model = models.ProductoCategoria

@@ -15,8 +15,12 @@ urlpatterns = [
     path("clientes/", views.clientes, name="clientes"),
     path('crear/', crear_cliente, name="crear"),
     path('busqueda/', busqueda, name="busqueda"),
-    path('about/', about, name="about"),
-    path('pages/', pages, name="pages"),
+    path('about/', TemplateView.as_view(template_name="CORE/about.html"), name="about"),
+    path('pages/', TemplateView.as_view(template_name="CORE/pages.html"), name="pages"),
+    path('promo1/', TemplateView.as_view(template_name="CORE/promo1.html"), name="promo1"),
+    path('promo2/', TemplateView.as_view(template_name="CORE/promo2.html"), name="promo2"),
+    path('promo3/', TemplateView.as_view(template_name="CORE/promo3.html"), name="promo3"),
+    #path('register/', views.register, name="register"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

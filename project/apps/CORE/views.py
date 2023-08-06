@@ -4,6 +4,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 #from django.urls import is_valid_path
 from .forms import ClienteForm
+from django.contrib.auth.models import User
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import authenticate, login, logout

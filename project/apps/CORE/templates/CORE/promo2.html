@@ -1,0 +1,26 @@
+{% extends 'CORE/index.html' %}
+
+{% load static %}
+ 
+{% block INDEX_TITULO %} 
+    Promo 2 - Chocolatosa
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+
+    <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'CORE/img/cacao.png' %}" alt="..." /></div>
+    <br>
+
+    <h2>Llevando 2 kilos de semillas te regalamos chocolate con cacao al 100.</h2>
+    <p><small><small><small><small>* PROMOCIÓN VÁLIDA DEL 1/8/2023 AL 31/8/2023 INCLUSIVE. EXCLUSIVO PARA COMPRAS DE TODO EL PAÍS. SÓLO PARA CONSUMO FAMILIAR. 
+        ESTAS PROMOCIONES NO SON ACUMULABLES CON OTRAS PROMOCIONES VIGENTES. NO INCLUYE PRODUCTOS DE LA CANASTA DE PRECIOS JUSTOS. 
+        PARA MÁS INFORMACIÓN CONSULTE EN WWW.TIENDAONLINE.COM.AR O COMUNÍQUESE GRATUITAMENTE AL TELÉFONO 0-800-000-0000 O
+        WHATSAPP 54911-0000-0000 </small></small></small></small></p>
+    <br><p>
+    {% include 'CORE/index_back.html' %}</p></br>
+
+{% endblock INDEX_CONTENIDO %}
+
+
+
+
