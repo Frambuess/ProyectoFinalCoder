@@ -6,8 +6,16 @@
 
 {% block INDEX_CONTENIDO %}
     {% if object_list %}
-        <p>Hay elementos</p>
 
+        {% for object in object_list %}
+            <ul>
+                <li>{{ object.nombre }}
+                    <a href="{% url 'producto:productocategoria_detail' object.id %}">Ver detalle</a>
+                    <a href="{% url 'producto:productocategoria_update' object.id %}">Actualizar</a>
+                    <a href="{% url 'producto:productocategoria_delete' object.id %}">Eliminar</a>
+                </li>
+            </ul>
+        {% endfor %}        
     {% else %}
         <p>no hay elementos</p>
 
@@ -16,3 +24,4 @@
 
     {% include 'CORE/index_back.html' %}
 {% endblock INDEX_CONTENIDO %}
+

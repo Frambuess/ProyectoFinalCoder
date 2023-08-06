@@ -5,6 +5,8 @@
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
+    <a href="{% url 'producto:productocategoria_create' %}">Crear Listar Categorías de Productos</a>
+    <br>
     <a href="{% url 'producto:productocategoria_list' %}">Listar Categorías de Productos</a>
     <br>
     <br>
