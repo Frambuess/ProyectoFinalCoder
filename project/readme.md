@@ -22,6 +22,8 @@ Y tiene algunas búsquedas en la base (http://127.0.0.1:8000/busqueda/):
 - Clientes que hayan nacido antes de 2005 y, por lo tanto, mayores de edad 
 - Clientes de Argentina
 
+Tiene dos aplicaciones CORE y producto
+
 ## La parte técnica del proyecto
 
 Se utilizó Python, Visual Studio Code, Django Framework con MVT, Git, Github y Html.

@@ -5,6 +5,17 @@ from django.shortcuts import redirect, render
 #from django.urls import is_valid_path
 from .forms import ClienteForm
 
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.http import HttpResponse
+from django.http.request import HttpRequest
+from django.shortcuts import render
+
+from . import forms
+
+
 # Create your views here.
 from .models import Cliente, Mediodepago, Pais
 
@@ -59,7 +70,7 @@ def pages(request):
 #! LOGIN
 
 
-""" def login_request(request: HttpRequest) -> HttpResponse:
+def login_request(request: HttpRequest) -> HttpResponse:
     if request.method == "POST":
         form = forms.CustomAuthenticationForm(request, request.POST)
         if form.is_valid():
@@ -71,4 +82,4 @@ def pages(request):
                 return render(request, "CORE/index.html", {"mensaje": "Inició sesión correctamente"})
     else:
         form = forms.CustomAuthenticationForm()
-    return render(request, "CORE/login.html", {"form": form}) """
+    return render(request, "CORE/login.html", {"form": form})
