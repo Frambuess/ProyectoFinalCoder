@@ -1,11 +1,19 @@
 from django.urls import path
 
+#from .views import home, index
+
 from . import views
 
 app_name = "producto"
 
-urlpatterns = [path("", views.index, name="home")]
 
+urlpatterns = [
+    path("producto/", views.index, name="home"),
+    path("productocategoria/list/", views.productocategoria_list, name="productocategoria_list"),
+    
+]
+
+""" 
 # PRODUCTOCATEGORIA
 urlpatterns += [
     path("productocategoria/list/", views.ProductoCategoriaList.as_view(), name="productocategoria_list"),
@@ -22,4 +30,4 @@ urlpatterns += [
     path("producto/detail/<int:pk>", views.ProductoDetail.as_view(), name="producto_detail"),
     path("producto/update/<int:pk>", views.ProductoUpdate.as_view(), name="producto_update"),
     path("producto/delete/<int:pk>", views.ProductoDelete.as_view(), name="producto_delete"),
-]
+] """

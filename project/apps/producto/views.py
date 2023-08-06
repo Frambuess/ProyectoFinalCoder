@@ -1,5 +1,21 @@
 # Create your views here.
 
+from django.shortcuts import render
+from . import models
+
+def index(request):
+ #   contexto = {"app": "Aplicación Producto" }
+    return render(request, "producto/index.html")
+
+# LIST
+
+def productocategoria_list(request):
+    categorias = models.ProductoCategoria.objects.all()
+    context = {"categorias": categorias}
+    return render(request, "producto/productocategoria_list.html", context)
+
+
+""" 
 from typing import Any
 
 from django.contrib.auth.decorators import login_required
@@ -22,7 +38,7 @@ from . import forms, models
 
 # PAGINA PRINCIPAL
 
-@login_required
+#@login_required
 def index(request):
     return render(request, "producto/index.html")
 
@@ -85,4 +101,4 @@ class ProductoUpdate(UpdateView):
 
 class ProductoDelete(DeleteView):
     model = models.Producto
-    success_url = reverse_lazy("producto:producto_list")
+    success_url = reverse_lazy("producto:producto_list") """
