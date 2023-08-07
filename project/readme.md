@@ -31,6 +31,11 @@ Se utilizó Python, Visual Studio Code, Django Framework con MVT, Git, Github y 
 Superuser: admin
 Clave: 1234
 
+Usuario: pepe
+Constraseña: sancristobal88
+
+Usuario: pepa
+Constraseña: tienda123
 
 ## Errores conocidos
 

@@ -5,9 +5,14 @@
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
-    <a href="{% url 'producto:productocategoria_create' %}">Crear Listar Categorías de Productos</a>
-    <br>
-    <a href="{% url 'producto:productocategoria_list' %}">Listar Categorías de Productos</a>
+
+    <div class="d-grid gap-3 ">  
+        {% if user.is_staff %}
+            <a href="{% url 'producto:productocategoria_create' %}" class="btn btn-primary ">Crear Categorías de Productos</a>
+            <br>
+        {% endif %}
+        <a href="{% url 'producto:productocategoria_list' %}" class="btn btn-primary ">Listar Categorías de Productos</a>
+
     <br>
     <br>
     {% include 'CORE/index_back.html' %}

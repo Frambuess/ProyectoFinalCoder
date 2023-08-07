@@ -21,18 +21,32 @@
         <h3> Bienvenido {{ user.username }}</h3>
     {% endif %}
 
+    {% if user.is_staff %}
+        <div class="row">
+            <a href="{% url 'admin:index' %}" class="btn btn-outline-dark">Panel de Administración</a>
+        </div>
+        <div class="row">
+            <a href="{% url 'Home:register' %}" class="btn btn-outline-dark">Registrar nuevo vendedor</a>
+        </div>
+    {% endif %}
 
 
     <!-- Heading Row-->
     <div class="row gx-4 gx-lg-5 align-items-center my-5">
         <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'CORE/img/fotoppal.png' %}" alt="..." /></div>
         <div class="col-lg-5">
-            <h1 class="font-weight-light">Tienda &#x2606; &#x2606; &#x2606; &#x2606; &#x2606;</h1>
+            <h1 class="font-weight-light">Tienda</h1> <h4 style="color:#F6BE00">&#9733; &starf; &starf; &starf; &starf;</h4>
             <p>Somos una tienda especializada en la comercialización de harinas, semillas y frutos secos. Queremos que pruebes y conozcas toda la variedad de productos. Hacemos envíos a todo el país.</p>
             <a class="btn btn-success" style="background-color:#25D366; border-color:white" href="https://wa.me/5491100000000" target="_blank">WhatsApp</a>
+            <!-- <a class="btn btn-success" style="background-color:#25D366; border-color:white" href="http://instagram.com/_u/dieteticastomy/" target="_blank">Link a Instagram</a> -->
+            <a href="http://instagram.com/_u/dieteticastomy/" target="_blank"><img src="{% static 'CORE/img/instagram.png' %}" alt="instagram"></a>
+            
         </div>
     </div>
+
+
    <!-- <h1 style="color:#25D366;">-->
+    <!-- https://msng.link/o?dieteticastomy=ig -->
 
     <!-- Content Row-->
 

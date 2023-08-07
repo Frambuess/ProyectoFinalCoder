@@ -20,7 +20,7 @@ urlpatterns = [
     path('promo1/', TemplateView.as_view(template_name="CORE/promo1.html"), name="promo1"),
     path('promo2/', TemplateView.as_view(template_name="CORE/promo2.html"), name="promo2"),
     path('promo3/', TemplateView.as_view(template_name="CORE/promo3.html"), name="promo3"),
-    #path('register/', views.register, name="register"),
+    path('register/', views.register, name="register"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

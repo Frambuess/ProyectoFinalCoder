@@ -84,3 +84,19 @@ def login_request(request: HttpRequest) -> HttpResponse:
     else:
         form = forms.CustomAuthenticationForm()
     return render(request, "CORE/login.html", {"form": form})
+
+
+#! REGISTRO
+
+
+@staff_member_required
+def register(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        form = forms.CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data["username"]
+            form.save()
+            return render(request, "CORE/index.html", {"mensaje": "Vendedor creado 😊"})
+    else:
+        form = forms.CustomUserCreationForm()
+    return render(request, "CORE/register.html", {"form": form})
