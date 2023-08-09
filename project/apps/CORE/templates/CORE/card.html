@@ -2,7 +2,7 @@
 
 <div class="card">
     <!-- <img src="{% static 'CORE/img/hambur.png' %}" class="card-img-top" alt="Promo1"> -->
-    <img src="{% if cardcontenido == "Hamburguera" %} {% static 'CORE/img/hambur.png' %} {% elif cardcontenido == "Chocolatosa" %} {% static 'CORE/img/cacao.png' %}  {% elif cardcontenido == "Norteña" %} {% static 'CORE/img/sesamo.png' %}  {% endif %}" class="card-img-top" alt="Promo1">
+    <img src="{% if cardcontenido == "Hamburguera" %} {% static 'CORE/img/hambur.png' %} {% elif cardcontenido == "Chocolatosa" %} {% static 'CORE/img/cacao.png' %}  {% elif cardcontenido == "Norteña" %} {% static 'CORE/img/pan.png' %}  {% endif %}" class="card-img-top" alt="Promo1">
     <div class="card-body">
         <h5 class="card-title">{{ card }}</h5>
         <p class="card-text">{{ cardcontenido }}</p>

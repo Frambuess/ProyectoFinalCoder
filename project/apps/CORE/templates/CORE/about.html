@@ -1,14 +1,21 @@
 {% extends 'CORE/index.html' %}
 
+{% load static %}
+
 {% block INDEX_TITULO %} 
     Acerca de mí
 {% endblock INDEX_TITULO %}
 
 
 {% block INDEX_CONTENIDO %}
-    <div><p id="p0">Hola! &#x1f44b; Mi nombre es Irina, soy Licenciada en Matemática y tengo dos hijas pequeñas &#x1f467; &#9829; &#128103;&#127995;</p> 
+    <div><p id="p0">Hola! &#x1f44b; Mi nombre es Irina, soy Licenciada en Matemática y tengo dos hijas pequeñas &#x1f467; 💜 &#128103;&#127995;</p> 
     <p>Estuve realizando un <a href="https://www.coderhouse.com/online/python" target="_blank">Curso en Coderhouse sobre Python</a> y como parte de la entrega final me estoy aventurando a hacer una aplicación web por primera vez.</p>  
     <p>Contacto: <a href="mailto:frambuess@gmail.com">frambuess@gmail.com</a>.</p></div>
+
+
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'CORE/img/fotoppal.png' %}" alt="..." /></div>
+    </div>
 
     <br><p>
     {% include 'CORE/index_back.html' %} </p></br>

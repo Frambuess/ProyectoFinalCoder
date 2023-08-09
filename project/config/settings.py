@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+import os
+
 #! Sirve para generar clave aleatoria para el proyecto
 from django.core.management.utils import get_random_secret_key
 from django.urls import reverse_lazy
@@ -136,3 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = reverse_lazy("Home:login")
 # ! esto es necesario cuando views no redirecciona a otra url
 LOGIN_REDIRECT_URL = reverse_lazy("Home:index")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
