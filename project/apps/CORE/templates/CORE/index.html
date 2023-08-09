@@ -18,7 +18,7 @@
 
     {% if user.is_authenticated %}
         {{ mensaje }}
-        <h3> Bienvenido {{ user.username }}</h3>
+        <h3> Bienvenido/a {{ user.username }}</h3>
     {% endif %}
 
     {% if user.is_staff %}

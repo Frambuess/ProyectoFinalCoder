@@ -1,8 +1,10 @@
 # Create your views here.
 
 #! importaciones para login
+from typing import Any
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models.query import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
@@ -14,8 +16,9 @@ from django.views.generic import (
     UpdateView,
 )
 
-
 from . import forms, models
+
+# PAGINA PRINCIPAL
 
 @login_required
 def index(request):
@@ -52,12 +55,6 @@ class ProductoCategoriaDelete(DeleteView):
     model = models.ProductoCategoria
     success_url = reverse_lazy("producto:productocategoria_list")
 
-""" 
-# PAGINA PRINCIPAL
-
-#@login_required
-def index(request):
-    return render(request, "producto/index.html")
 
 # ***** PRODUCTO
 
@@ -91,4 +88,4 @@ class ProductoUpdate(UpdateView):
 
 class ProductoDelete(DeleteView):
     model = models.Producto
-    success_url = reverse_lazy("producto:producto_list") """
+    success_url = reverse_lazy("producto:producto_list") 

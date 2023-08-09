@@ -17,7 +17,7 @@ urlpatterns = [
 ]
 
 
-""" 
+
 # PRODUCTO
 urlpatterns += [
     path("producto/list/", views.ProductoList.as_view(), name="producto_list"),
@@ -25,4 +25,4 @@ urlpatterns += [
     path("producto/detail/<int:pk>", views.ProductoDetail.as_view(), name="producto_detail"),
     path("producto/update/<int:pk>", views.ProductoUpdate.as_view(), name="producto_update"),
     path("producto/delete/<int:pk>", views.ProductoDelete.as_view(), name="producto_delete"),
-] """
+]

@@ -9,9 +9,16 @@
     <div class="d-grid gap-3 ">  
         {% if user.is_staff %}
             <a href="{% url 'producto:productocategoria_create' %}" class="btn btn-primary ">Crear Categorías de Productos</a>
-            <br>
         {% endif %}
         <a href="{% url 'producto:productocategoria_list' %}" class="btn btn-primary ">Listar Categorías de Productos</a>
+
+    <br>
+    <div class="d-grid gap-3 ">  
+        {% if user.is_staff %}
+            <a href="{% url 'producto:producto_create' %}" class="btn btn-primary ">Crear Productos</a>
+        {% endif %}
+        <a href="{% url 'producto:producto_list' %}" class="btn btn-primary ">Listar Productos</a>
+    
 
     <br>
     <br>
