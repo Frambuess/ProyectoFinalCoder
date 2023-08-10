@@ -12,6 +12,8 @@ class Vendedor(models.Model):
     def __str__(self):
         return self.usuario.username
 
+    class Meta:
+        verbose_name_plural = "Vendedores"
 
 class Venta(models.Model):
     vendedor = models.ForeignKey(Vendedor, on_delete=models.DO_NOTHING)
@@ -30,3 +32,7 @@ class Venta(models.Model):
     def save(self, *args, **kwargs):
         self.precio_total = self.producto.precio * self.cantidad
         super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return f"{self.vendedor} vendió {self.cantidad} {self.producto} por un total de {self.precio_total} pesos el día {self.fecha_venta}."
+    
