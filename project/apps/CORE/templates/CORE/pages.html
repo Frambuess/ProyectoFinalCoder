@@ -15,9 +15,6 @@ más detalle de lo aue se veía en el apartado anterior). -->
 
 
 
-
-
-
 <UL TYPE="Disk">
 
     <LI>
@@ -43,10 +40,15 @@ más detalle de lo aue se veía en el apartado anterior). -->
     <LI>
     http://127.0.0.1:8000/promo3/  <a href="{% url 'Home:promo3' %}" role="button" class="btn btn-outline-dark "> Detalle </a><br><br> 
     <LI>
-    http://127.0.0.1:8000/pages/  <a href="{% url 'Home:pages' %}" role="button" class="btn btn-outline-danger  "> Detalle </a><br><br>
+    http://127.0.0.1:8000/producto/  <a href="{% url 'producto:home' %}" role="button" class="btn btn-outline-danger  "> Detalle </a><br><br> 
+    <LI>
+    http://127.0.0.1:8000/producto/create/  <a href="{% url 'producto:producto_create' %}" role="button" class="btn btn-outline-primary  "> Detalle </a><br><br> 
+    <LI>
+    http://127.0.0.1:8000/producto/list/  <a href="{% url 'producto:producto_list' %}" role="button" class="btn btn-outline-success "> Detalle </a><br><br> 
+    <LI>
+    http://127.0.0.1:8000/productocategoria/create/  <a href="{% url 'producto:productocategoria_create' %}" role="button" class="btn btn-outline-warning  "> Detalle </a><br><br> 
+    <LI>
+    http://127.0.0.1:8000/productocategoria/list/  <a href="{% url 'producto:productocategoria_list' %}" role="button" class="btn btn-outline-info   "> Detalle </a><br><br> 
     </UL>
-
-    <br><p>
-    {% include 'CORE/index_back.html' %} </p></br>
 
 {% endblock INDEX_CONTENIDO %}
