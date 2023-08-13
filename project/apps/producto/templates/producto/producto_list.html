@@ -16,13 +16,18 @@
 
         {% for object in object_list %}
             <ul>
-                <li>{{ object.nombre }} ${{ object.precio }}
+                <li>{{ object.nombre }} ${{ object.precio }} <br>
+                    {% if object.imagen %}
+                        <img src="{{ object.imagen.url }}" alt="imagen" class="" style="height: 100px;"></li>
+                    {% endif %}
                     <a href="{% url 'producto:producto_detail' object.id %}" class="btn btn-secondary btn-sm">
                         Ver detalle</a>
                     <a href="{% url 'producto:producto_update' object.id %}" class="btn btn-primary  btn-sm">
                         Actualizar</a>
                     <a href="{% url 'producto:producto_delete' object.id %}" class="btn btn-danger  btn-sm">
                         Eliminar</a>
+                    <br> <br>
+
                 </li>
             </ul>
         {% endfor %}        

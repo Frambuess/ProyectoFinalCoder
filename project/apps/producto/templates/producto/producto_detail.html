@@ -7,13 +7,12 @@
 {% block INDEX_CONTENIDO %}
     
     <ul>
-        <li>Categoría: {{ object.categoria }} </li>
-        <li>Nombre: {{ object.nombre }} </li>
-        <li>Unidad de medida: {{ object.unidad_de_medida }} </li>
-        <li>Cantidad: {{ object.cantidad }} </li>
-        <li>Precio: {{ object.precio }} </li>
-        <li>Descripción: {{ object.descripcion }} 
-        <li>Fecha de actualización: {{ object.fecha_actualizacion }} </li>
+        <li><strong>Categoría:</strong> {{ object.categoria }} </li>
+        <li><strong>Nombre:</strong> {{ object.nombre }} </li>
+        <li><strong>Unidad de medida:</strong> {{ object.unidad_de_medida }} </li>
+        <li><strong>Precio ($):</strong> {{ object.precio }} </li>
+        <li><strong>Descripción:</strong> {{ object.descripcion }} 
+        <li><strong>Fecha de actualización:</strong> {{ object.fecha_actualizacion }} </li>
     </ul>
 
 {% endblock INDEX_CONTENIDO %}

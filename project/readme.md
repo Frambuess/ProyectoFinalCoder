@@ -30,6 +30,11 @@ Constraseña: sancristobal88
 Usuario: pepa
 Constraseña: tienda123
 
+Vendedora: Veronica
+Contraseña: Contraseña1
+
+Vendedora:
+Contraseña: Contraseña2
 
 ## Errores conocidos
 
@@ -37,3 +42,4 @@ Constraseña: tienda123
 
 
 ## Futuras mejoras
+Ver estadísticas de las ventas mensuales/semanales, por vendedor, categoría de productos y productos.
